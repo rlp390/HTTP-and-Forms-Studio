@@ -2,6 +2,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css" />
 	<script>
 		// TODO: create a handler
 		function setSearchEngine() {
@@ -17,6 +18,14 @@
     	window.addEventListener("load", function(){
 			let form = document.querySelector("form");
 			form.addEventListener("submit", function(event) {
+				let engineInput = document.querySelector("input[name=engine]");
+				let qInput = document.querySelector("input[name=q]");
+
+				if(engineInput.value === "" || qInput.value === "") {
+					alert("Must select an engine and enter search parameters!");
+					event.preventDefault();
+				}
+
 				document.getElementById("searchForm").action = setSearchEngine();
 			})
     	});

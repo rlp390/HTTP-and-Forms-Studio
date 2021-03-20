@@ -1,0 +1,21 @@
+body {
+    background-color: gray;
+    text-align: center;
+}
+
+label {
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+    color: purple;
+    display: table-row;
+}
+
+form {
+    display: inline-table;
+}
+
+#searchForm {
+    background-color: hotpink;
+    
+}
